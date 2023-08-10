@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.efb8ad1c.css",
+    "main.js": "/static/js/main.f7bdbf6f.js",
+    "static/media/hero.png": "/static/media/hero.4813a18cd4ebdacdc024.png",
+    "static/media/cover.png": "/static/media/cover.0bd58e052b1e02dfbf7a.png",
+    "static/media/experience1.png": "/static/media/experience1.9cd8e6479eeb0f9b2e3c.png",
+    "static/media/experience2.png": "/static/media/experience2.0390f0d11be34886375c.png",
+    "static/media/discover5.png": "/static/media/discover5.8ee15474025fe89f5e58.png",
+    "static/media/discover3.png": "/static/media/discover3.4500490d993579756a4f.png",
+    "static/media/discover1.png": "/static/media/discover1.48e144498753fd1959cb.png",
+    "static/media/discover4.png": "/static/media/discover4.3d21902f36290322cea2.png",
+    "static/media/accomodate2.png": "/static/media/accomodate2.0314d6e588369d2da6d9.png",
+    "static/media/discover6.png": "/static/media/discover6.f08925bacfb17f751b1e.png",
+    "static/media/accomodate1.png": "/static/media/accomodate1.696d802ec2220dd851ca.png",
+    "static/media/accomodate3.png": "/static/media/accomodate3.b950416549f8df7b1d95.png",
+    "static/media/accomodate5.png": "/static/media/accomodate5.59082d76969ccd0bf1bf.png",
+    "static/media/discover7.png": "/static/media/discover7.4381874ed32114946dcb.png",
+    "static/media/discover2.png": "/static/media/discover2.81e58b1e5b83f9aa6d8a.png",
+    "static/media/accomodate4.png": "/static/media/accomodate4.d02321d2948fe0350b95.png",
+    "static/media/Group 8.svg": "/static/media/Group 8.4f62c6bc01335e7c66d4ec2f2d8d12a5.svg",
+    "index.html": "/index.html",
+    "static/media/send.svg": "/static/media/send.2a5030293d29117452d1.svg",
+    "main.efb8ad1c.css.map": "/static/css/main.efb8ad1c.css.map",
+    "main.f7bdbf6f.js.map": "/static/js/main.f7bdbf6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efb8ad1c.css",
+    "static/js/main.f7bdbf6f.js"
+  ]
+}
