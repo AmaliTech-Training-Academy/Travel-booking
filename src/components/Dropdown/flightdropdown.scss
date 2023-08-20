@@ -19,28 +19,21 @@
       cursor: pointer;
       button {
         border: none;
+        background-color: transparent;
       }
     }
     // &__drop-btn:hover &__drop-content {
     //   display: block;
     // }
     &__drop-content {
-      color: var(--primary, #3d3939);
-      font-family: Inter;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
       position: absolute;
       display: block;
-      margin-top: 20px;
-      width: 120px;
       z-index: 1;
-      top: 16px;
+      margin: 0;
+      padding: 0;
+      top: 34px;
       left: 0;
-      padding-top: 14px;
-      padding-bottom: 14px;
-      padding-left: 10px;
+
       border-radius: 8px;
       background: #fff;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -53,11 +46,17 @@
       }
       li {
         list-style-type: none;
-        margin-bottom: 20px;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        color: var(--primary, #3d3939);
+        padding: 10px;
+        white-space: nowrap;
       }
     }
   }
 }
 @media screen and (max-width: 991px) {
-  
 }

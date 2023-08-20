@@ -1,4 +1,6 @@
 .flight-hero {
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   &__main {
     margin-bottom: 24px;
     position: relative;
@@ -13,19 +15,12 @@
       position: absolute;
       text-align: center;
       z-index: 100;
-      bottom: 0;
-      // padding: 144px 226px 176px 228px;
-    //   transform: translate(50%, 50%);
-
-      //   margin-left: auto;
-      //   margin-right: auto;
-      //   padding-left: auto;
-      //   padding-right: auto;
-      //   max-width: 860px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
       &__title {
         text-align: center;
-        font-family: Poppins;
         font-size: 48px;
         font-style: normal;
         font-weight: 700;
@@ -35,13 +30,46 @@
       }
       &__description {
         text-align: center;
-        font-family: Poppins;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         text-align: center;
+      }
+    }
+  }
+}
 
+@media screen and (max-width: 991px) {
+  .flight-hero {
+    &__main {
+      &__content {
+        font-family: Poppins;
+
+        text-align: center;
+        font-size: 2px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0;
+        padding: 0;
+
+        &__title {
+          font-family: Poppins;
+
+          color: #fff;
+          text-align: center;
+          font-size: 8px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          width: 100%;
+          margin: 0px;
+          padding: 0;
+        }
+        &__description {
+          width: 400px;
+        }
       }
     }
   }

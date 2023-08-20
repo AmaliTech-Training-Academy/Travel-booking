@@ -34,11 +34,19 @@
   .departure-details {
     flex-direction: column;
     row-gap: 16px;
+    .departure{
+      width: 100%;
+
+      input{
+        width: 100%;
+      }
+    }
     .btn-small {
       display: none;
     }
     .btn-lg {
       display: block;
+      width: 100%;
     }
   }
 }

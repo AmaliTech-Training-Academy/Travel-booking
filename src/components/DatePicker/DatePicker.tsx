@@ -2,6 +2,8 @@ import React from "react";
 import calender from "../../assets/images/flights/zondicons_calendar.png";
 import expand from "../../assets/images/flights/expand.png";
 import DatePicker from "react-datepicker";
+import { DateRangePicker } from "react-date-range";
+
 import "react-datepicker/dist/react-datepicker.css";
 import "./datepicker.scss"; // Add your own styling here
 
