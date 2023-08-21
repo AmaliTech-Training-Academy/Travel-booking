@@ -8,7 +8,7 @@ import BusinessSignup from "./pages/BusinessSignup";
 import Accomodation from "./routes/Accomodation";
 import Hotels from "./routes/Hotels";
 import CarRentals from "./routes/CarRentals";
-import FlightBooking from "./pages/FlightBooking";
+import Flights from "./routes/Flights";
 import Dashboard from "./routes/Dashboard";
 import Cart from "./routes/Cart";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -32,8 +32,8 @@ function App(): JSX.Element {
         <Route path="/welcome" element={<Welcome />} />
         <Route path="/accomodation" element={<Accomodation />} />
         <Route path="/hotels" element={<Hotels />} />
-        <Route path="/car-rentals" element={<CarRentals />} />
-        <Route path="/flight-booking" element={<FlightBooking />} />
+        <Route path="/carrentals" element={<CarRentals />} />
+        <Route path="/flights" element={<Flights />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
