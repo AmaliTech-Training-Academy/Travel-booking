@@ -1,0 +1,41 @@
+.calender {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  background: var(--primary, #eee);
+  padding: 10px 16px;
+  width: 400px;
+  //   margin-right: 16px;
+  &__start-date {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .division {
+    border: 1px solid #ababab;
+    height: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .custom-datepicker {
+    border: none;
+    background: var(--primary, #eee);
+    width: 80px;
+    margin-left: 8px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .calender {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: 100%;
+    display: none;
+
+    
+  }
+}

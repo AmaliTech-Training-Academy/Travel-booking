@@ -9,6 +9,7 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.32",
     "@types/react": "^18.2.7",
+    "@types/react-datepicker": "^4.15.0",
     "@types/react-dom": "^18.2.4",
     "autoprefixer": "^10.4.14",
     "axios": "^1.4.0",
@@ -16,6 +17,8 @@
     "mdb-react-ui-kit": "^6.1.0",
     "postcss": "^8.4.27",
     "react": "^18.2.0",
+    "react-date-range": "^1.4.0",
+    "react-datepicker": "^4.16.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
     "react-router-dom": "^6.11.2",
@@ -55,6 +58,7 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.3",
     "@types/axios": "^0.14.0",
+    "@types/react-date-range": "^1.4.4",
     "react-scripts": "^5.0.1",
     "svgo": "^3.0.2"
   },
