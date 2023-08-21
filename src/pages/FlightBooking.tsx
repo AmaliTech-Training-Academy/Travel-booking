@@ -1,6 +1,6 @@
 // Flights.tsx
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar/Navbar";
+import HomeNav from "../components/Navbar/HomeNav";
 import Footer from "../components/Footer/Footer";
 import Flight from "../components/Flight/FlightHero";
 import FlightFilter from "../components/FlightFilter/FlightFliter";
@@ -21,7 +21,7 @@ const FlightBooking: React.FC = () => {
 
   return (
     <div>
-      <Navbar />
+      <HomeNav />
       <Flight />
       <div className="flight-booking">
         <h5 className="flight-booking__title">Where do you want to go?</h5>

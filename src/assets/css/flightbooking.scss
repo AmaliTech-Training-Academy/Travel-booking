@@ -1,8 +1,8 @@
 .flight-booking {
   padding-left: 118px;
   padding-right: 118px;
-  // margin-left: auto;
-  // margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
   background: #fff;
   &__title {
     color: var(--primary, #3d3939);
@@ -16,8 +16,7 @@
 }
 @media screen and (max-width: 991px) {
   .flight-booking {
-    margin-left: auto;
-    margin-right: auto;
+   
     padding-left: 18px;
     padding-right: 18px;
   }
