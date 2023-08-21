@@ -23,13 +23,13 @@ export interface MenuItem {
     },
     {
         title: "Car Rentals",
-        url: "/carrentals",
+        url: "/car-rentals",
         cName: "navLinks",
         active: "activeItem",
       },
       {
         title: "Flights",
-        url: "/flights",
+        url: "/flight-booking",
         cName: "navLinks",
         active: "activeItem",
       },

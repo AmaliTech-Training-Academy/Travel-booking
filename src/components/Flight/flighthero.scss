@@ -1,0 +1,74 @@
+.flight-hero {
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  &__main {
+    margin-bottom: 24px;
+    position: relative;
+    // height: 504px;
+
+    &__aeroplane {
+      z-index: -100;
+      width: 100%;
+    }
+    &__content {
+      color: #fff;
+      position: absolute;
+      text-align: center;
+      z-index: 100;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &__title {
+        text-align: center;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        // margin-top: 0;
+        margin-bottom: 16px;
+      }
+      &__description {
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .flight-hero {
+    &__main {
+      &__content {
+        margin: 0;
+        padding: 0;
+
+        &__title {
+          color: #FFF;
+          text-align: center;
+          font-family: Poppins;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin: 0;
+          padding: 0;
+        }
+        &__description {
+          width: 400px;
+          color: #fff;
+          text-align: center;
+          font-family: Poppins;
+          font-size: 6px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}

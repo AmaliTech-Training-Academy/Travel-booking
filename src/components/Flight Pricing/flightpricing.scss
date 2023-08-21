@@ -1,0 +1,38 @@
+.flight-pricing {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  background: #eee;
+  box-shadow: -1px 5px 5px 0px rgba(125, 125, 125, 0.25);
+  margin-bottom: 24px;
+  width: 100%;
+  padding: 14px 24px 1px 24px;
+
+
+  &__range {
+    padding-right: 260px;
+    margin-right: 10px;
+    h4 {
+      color: #3d3939;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+    }
+    p {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+.line{
+    border: 1px solid #D0D0D0;
+    height: 47px;
+    margin-right: 24px;
+}
