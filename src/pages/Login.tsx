@@ -47,7 +47,7 @@ const Login: React.FC = () => {
     toast("Login successful", {
       type: "success",
     });
-    navigate("/flight-booking");
+    navigate("/welcome");
   };
 
   const handleTogglePassword = () => {
