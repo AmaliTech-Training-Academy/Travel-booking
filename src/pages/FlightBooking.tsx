@@ -26,7 +26,9 @@ const FlightBooking: React.FC = () => {
       <div className="flight-booking">
         <h5 className="flight-booking__title">Where do you want to go?</h5>
 
-        <FlightFilter />
+        <FlightFilter onFilter={function (tripType: string, passenger: string, flightType: string, selectedStartDate: Date | null, selectedEndDate: Date | null): void {
+          throw new Error("Function not implemented.");
+        } } />
         {/* <FlightPricing /> */}
         <FlightBookingCard />
       </div>

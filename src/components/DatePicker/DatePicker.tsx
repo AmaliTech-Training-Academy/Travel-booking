@@ -32,7 +32,7 @@ const CustomDatePicker: React.FC<CustomDatePickerProps> = ({
           dateFormat={customDateFormat}
           className="custom-datepicker"
         />
-        <img src={expand} alt="" />
+        {/* <img src={expand} alt="" /> */}
       </div>
       <div className="division"></div>
       <div className="calender__start-date">
@@ -43,7 +43,7 @@ const CustomDatePicker: React.FC<CustomDatePickerProps> = ({
           dateFormat={customDateFormat}
           className="custom-datepicker"
         />
-        <img src={expand} alt="" />
+        {/* <img src={expand} alt="" /> */}
       </div>
     </div>
   );

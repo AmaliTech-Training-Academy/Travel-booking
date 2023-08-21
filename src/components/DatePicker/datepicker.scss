@@ -5,7 +5,7 @@
   border-radius: 6px;
   background: var(--primary, #eee);
   padding: 10px 16px;
-  width: 400px;
+  max-width: 400px;
   //   margin-right: 16px;
   &__start-date {
     display: flex;
@@ -31,10 +31,8 @@
 @media screen and (max-width: 991px) {
   .calender {
     display: flex;
-    flex-direction: column;
     row-gap: 16px;
     width: 100%;
-    display: none;
 
     
   }

@@ -5,7 +5,7 @@
   .departure {
     border-radius: 6px;
     background: var(--primary, #eee);
-    padding: 10px 16px;
+    padding: 0px 16px;
     width: 343px;
     display: flex;
     align-items: center;
@@ -35,6 +35,8 @@
     flex-direction: column;
     row-gap: 16px;
     .departure{
+      padding: 8px 16px;
+
       width: 100%;
 
       input{
