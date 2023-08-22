@@ -6,8 +6,8 @@ import image1 from "../../assets/images/accomodation/accomodation.png";
 import image2 from "../../assets/images/accomodation/accomodation1.png";
 import image3 from "../../assets/images/accomodation/accomodation2.png";
 import image4 from "../../assets/images/accomodation/accomodation3.png";
-import image5 from "../../assets/images/accomodation/accomodation4.png";
-import image6 from "../../assets/images/accomodation/accomodation5.png";
+import image5 from "../../assets/images/accomodation/accomodation5.png";
+import image6 from "../../assets/images/accomodation/accomodation4.jpg";
 import image7 from "../../assets/images/accomodation/accomodation6.png";
 import image8 from "../../assets/images/accomodation/accomodation7.png";
 import image9 from "../../assets/images/accomodation/accomodation8.png";
@@ -30,7 +30,10 @@ const imageArray = [image1, image2, image3, image4, image5,
   image16, image17, image18, image19, image20
 ]; 
 
-const AccomodationCards: React.FC = () => {
+const AccomodationCards: React.FC<{ page: number; perPage: number }> = ({ page, perPage }) => {
+  // Calculate the index range for items on the current page
+  const startIndex = (page - 1) * perPage;
+  const endIndex = startIndex + perPage;
   const [heartStates, setHeartStates] = useState(new Array(accomodationList.length).fill(false));
 
   const toggleHeartFill = (index: number) => {
@@ -42,7 +45,7 @@ const AccomodationCards: React.FC = () => {
   return (
     <>
       <div className="cardContainer">
-        {accomodationList.map((accomodation, index) => (
+        {accomodationList.slice(startIndex, endIndex).map((accomodation, index) => (
           <div className="accomodationCard" key={accomodation.id}>
             <div className="imageArea">
               <div>
