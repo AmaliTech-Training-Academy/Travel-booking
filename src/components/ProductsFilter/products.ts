@@ -8,7 +8,11 @@ export interface Accomodations {
     price: number;
     description: string;
     locationName: string;
-    mapName: string
+    mapName: string;
+    propertyType: string;
+    facilities: string;
+    roomFacility: string;
+    liesure: string;
   }
   
   export const accomodationList: Accomodations[] = [
@@ -20,7 +24,11 @@ export interface Accomodations {
       price: 456,
       mapUrl: "activeItem",
       mapName: "activeItem",
-      locationName: "activeItem"
+      locationName: "activeItem",
+       propertyType: "string",
+    facilities: "string",
+    roomFacility: "string",
+    liesure: "string"
     },
     {
       title: "Dashboard",
@@ -30,7 +38,11 @@ export interface Accomodations {
       price: 456,
       mapUrl: "activeItem",
       mapName: "activeItem",
-      locationName: "activeItem"
+      locationName: "activeItem",
+       propertyType: "string",
+    facilities: "string",
+    roomFacility: "string",
+    liesure: "string"
     },
     {
       title: "Cart",
@@ -40,7 +52,11 @@ export interface Accomodations {
       price: 456,
       mapUrl: "activeItem",
       mapName: "activeItem",
-      locationName: "activeItem"
+      locationName: "activeItem",
+       propertyType: "string",
+    facilities: "string",
+    roomFacility: "string",
+    liesure: "string"
     },
     
       {
@@ -51,7 +67,11 @@ export interface Accomodations {
         price: 456,
         mapUrl: "activeItem",
         mapName: "activeItem",
-        locationName: "activeItem"
+        locationName: "activeItem",
+         propertyType: "stri",
+    facilities: "string",
+    roomFacility: "string",
+    liesure: "string"
       },
       {
         title: "Customer",
@@ -61,7 +81,11 @@ export interface Accomodations {
         price: 456,
         mapUrl: "activeItem",
         mapName: "activeItem",
-        locationName: "activeItem"
+        locationName: "activeItem",
+         propertyType: "stri",
+    facilities: "string",
+    roomFacility: "string",
+    liesure: "string"
       },
       {
         title: "Business",
@@ -71,7 +95,11 @@ export interface Accomodations {
         price: 456,
         mapUrl: "activeItem",
         mapName: "activeItem",
-        locationName: "activeItem"
+        locationName: "activeItem",
+         propertyType: "stri",
+        facilities: "string",
+        roomFacility: "string",
+        liesure: "string"
       },
       {
         title: "Home",
@@ -81,7 +109,11 @@ export interface Accomodations {
         price: 456,
         mapUrl: "activeItem",
         mapName: "activeItem",
-        locationName: "activeItem"
+        locationName: "activeItem",
+         propertyType: "stri",
+         facilities: "string",
+         roomFacility: "string",
+          liesure: "string"
       },
       {
         title: "Home",
@@ -91,7 +123,11 @@ export interface Accomodations {
         price: 456,
         mapUrl: "activeItem",
         mapName: "activeItem",
-        locationName: "activeItem"
+        locationName: "activeItem",
+         propertyType: "stri",
+        facilities: "string",
+        roomFacility: "string",
+       liesure: "string"
       },
       {
         title: "Home",
@@ -101,7 +137,11 @@ export interface Accomodations {
         price: 456,
         mapUrl: "activeItem",
         mapName: "activeItem",
-        locationName: "activeItem"
+        locationName: "activeItem",
+         propertyType: "stri",
+        facilities: "string",
+        roomFacility: "string",
+        liesure: "string"
       },
       {
         title: "Home",
@@ -111,7 +151,11 @@ export interface Accomodations {
         price: 456,
         mapUrl: "activeItem",
         mapName: "activeItem",
-        locationName: "activeItem"
+        locationName: "activeItem",
+         propertyType: "stri",
+        facilities: "string",
+         roomFacility: "string",
+        liesure: "string"
       },
       {
         title: "Home",
@@ -121,7 +165,11 @@ export interface Accomodations {
         price: 456,
         mapUrl: "activeItem",
         mapName: "activeItem",
-        locationName: "activeItem"
+        locationName: "activeItem",
+         propertyType: "stri",
+        facilities: "string",
+        roomFacility: "string",
+        liesure: "string"
       },
       {
         title: "Home",
@@ -131,8 +179,11 @@ export interface Accomodations {
         price: 456,
         mapUrl: "activeItem",
         mapName: "activeItem",
-        locationName: "activeItem"
-      }
-    //   
+        locationName: "activeItem",
+         propertyType: "stri",
+        facilities: "string",
+       roomFacility: "string",
+        liesure: "string"
+      }  
   ];
   

@@ -27,9 +27,12 @@ const HomeNav: React.FC = () => {
                   {menuList[1].title}
                 </Link>
                 <Dropdown />
+                <div className="cartArea">
                 <Link className="navitem" to={menuList[2].url}>
                   {menuList[2].title}
-                </Link>
+                  <span className="cartAmount" id="itemsUpdate">0</span>
+                </Link>                
+             </div>
               </div>
             </div>
           </div>
@@ -45,9 +48,12 @@ const HomeNav: React.FC = () => {
               {menuList[1].title}
             </Link>
             <Dropdown />
-            <Link className="navitem" to={menuList[2].url}>
-              {menuList[2].title}
-            </Link>
+            <div className="cartArea">
+                <Link className="navitem" to={menuList[2].url}>
+                  {menuList[2].title}
+                  <span className="cartAmount" id="itemsUpdate">0</span>
+                </Link>                
+             </div>
           </div>
         </div>
       </div>
