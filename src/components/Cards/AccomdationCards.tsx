@@ -22,6 +22,7 @@ import image17 from "../../assets/images/accomodation/accomodation16.png";
 import image18 from "../../assets/images/accomodation/accomodation17.png";
 import image19 from "../../assets/images/accomodation/accomodation18.png";
 import image20 from "../../assets/images/accomodation/accomodation19.png";
+import { Link } from "react-router-dom";
 
 
 const imageArray = [image1, image2, image3, image4, image5,
@@ -64,15 +65,15 @@ const AccomodationCards: React.FC<{ page: number; perPage: number }> = ({ page, 
               <h3>{accomodation.title}</h3>
               <div className="cardLinks">
                 <span>{accomodation.locationName}</span>
-                <a href={accomodation.locationUrl}>Show on map</a>
+                <a target="_blank" rel="noreferrer" href={accomodation.locationUrl}>Show on map</a>
               </div>
               <p>{accomodation.description}</p>
             </div>
             <div className="priceArea">
               <div>
-                <button className="availableButton">
+                <Link className="availableButton" to={"/singleproduct"}>
                   See Availability
-                </button>
+                </Link>
               </div>
               <div>
                 <p>$<span>{accomodation.price}</span></p>

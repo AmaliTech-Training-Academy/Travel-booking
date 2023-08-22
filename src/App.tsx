@@ -16,6 +16,7 @@ import SetNewPassword from "./pages/SetNewPassword";
 import Welcome from "./pages/CustomerWelcome";
 import CheckEmail from "./pages/CheckEmail";
 import 'react-toastify/dist/ReactToastify.css';
+import ProductPage from "./routes/ProductPage";
 
 
 function App(): JSX.Element {
@@ -36,6 +37,7 @@ function App(): JSX.Element {
         <Route path="/flights" element={<Flights />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/singleproduct" element={<ProductPage />} />
       </Routes>
         <ToastContainer/>
     </div>
