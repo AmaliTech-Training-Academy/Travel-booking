@@ -13,12 +13,14 @@ export interface Accomodations {
     roomFacility: [string, string, string];
     leisure: [string, string];
   }
+
+
   
   export const accomodationList: Accomodations[] = [
     { 
       id: 1,
       title: "Fitzroy London",
-      imageUrl: "../../assets/images/accomodation/accomodation.png",
+      imageUrl: "../src/assets/images/accomodation/accomodation.png",
       locationUrl: "https://www.google.com/maps/place/New+York",
       description: "Lorem ipsum dolor sit amet consectetur. Fermentum in tortor mattis viverra iaculis nibh. Ac ultrices aliquet est facilisi fusce enim quis id felis.",
       price: 345,
