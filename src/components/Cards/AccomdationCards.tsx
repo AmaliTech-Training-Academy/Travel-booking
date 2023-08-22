@@ -29,7 +29,7 @@ const AccomodationCards: React.FC = () => {
             <div className="infoArea">
               <h3>Fitzroy London</h3>
               <div className="cardLinks">
-                <a href={"/"}>New York</a>
+                <span>New York</span>
                 <a href={"/"}>Show on map</a>
               </div>
               <p>Lorem ipsum dolor sit amet consectetur. Fermentum in tortor mattis viverra iaculis nibh. Ac ultrices aliquet est facilisi fusce enim quis id felis.</p>
