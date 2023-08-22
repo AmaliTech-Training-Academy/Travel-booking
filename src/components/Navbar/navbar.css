@@ -113,6 +113,22 @@
   display: none;
 }
 
+.cartArea{
+  position: relative;
+  padding: 3px 0px 2px 20px;
+}
+
+.cartAmount{
+  font-size: 13px;
+  background-color: #b75c76;
+  color: #fff;
+  position: absolute;
+  top: -12px;
+  right: -24px;
+  padding: 1px 6px;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 1250px) {
   .mediaNavbar-links {
     gap: 112px;
