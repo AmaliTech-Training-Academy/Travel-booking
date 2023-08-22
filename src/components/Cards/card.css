@@ -10,6 +10,7 @@ height: 226px;
 align-items: center;
 flex-shrink: 0;
 padding: 10px;
+margin-bottom: 15px;
 }
 .accomodationCard .imageArea{
     position: relative;
@@ -44,7 +45,7 @@ font-weight: 700;
 line-height: normal;
   }
 
-  .accomodationCard .infoArea .cardLinks a{
+  .accomodationCard .infoArea .cardLinks a, .accomodationCard .infoArea .cardLinks span {
     color: var(--primary, #B75C76);
 font-family: Inter;
 font-size: 14px;
@@ -53,6 +54,7 @@ font-weight: 400;
 line-height: normal;
 text-decoration-line: underline;
 margin-right: 15px;
+cursor: pointer;
   }
 
   .accomodationCard .infoArea p{
