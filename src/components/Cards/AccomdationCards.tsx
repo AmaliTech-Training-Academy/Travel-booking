@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./card.css";
 import { Heart } from "react-feather";
-import product1 from "../../assets/images/accomodation/accomodation.png";
+import { accomodationList } from "./products"; // Import your accomodationList
 
 const AccomodationCards: React.FC = () => {
   const [isHeartFilled, setIsHeartFilled] = useState(false);
@@ -13,40 +13,42 @@ const AccomodationCards: React.FC = () => {
   return (
     <>
       <div className="cardContainer">
-         <div className="accomodationCard">
+        {accomodationList.map((accomodation) => (
+          <div className="accomodationCard" key={accomodation.id}>
             <div className="imageArea">
-             <div>
-               <img src={product1} alt="" />
-               <Heart
-                 className="heart-icon"
-                 color={isHeartFilled ? "#B75C76" : "#B75C76"}
-                 fill={isHeartFilled ? "#B75C76" : "none"}
-                 size={34}
-                 onClick={toggleHeartFill}
-               />
-             </div>
+              <div>
+                <img src={accomodation.imageUrl} alt="" />
+                <Heart
+                  className="heart-icon"
+                  color={isHeartFilled ? "#B75C76" : "#B75C76"}
+                  fill={isHeartFilled ? "#B75C76" : "none"}
+                  size={34}
+                  onClick={toggleHeartFill}
+                />
+              </div>
             </div>
             <div className="infoArea">
-              <h3>Fitzroy London</h3>
+              <h3>{accomodation.title}</h3>
               <div className="cardLinks">
-                <span>New York</span>
-                <a href={"/"}>Show on map</a>
+                <span>{accomodation.locationName}</span>
+                <a href={accomodation.locationUrl}>Show on map</a>
               </div>
-              <p>Lorem ipsum dolor sit amet consectetur. Fermentum in tortor mattis viverra iaculis nibh. Ac ultrices aliquet est facilisi fusce enim quis id felis.</p>
+              <p>{accomodation.description}</p>
             </div>
             <div className="priceArea">
-            <div>
-            <button className="availableButton">
-             See Avalilability
-           </button>
+              <div>
+                <button className="availableButton">
+                  See Availability
+                </button>
+              </div>
+              <div>
+                <p>$<span>{accomodation.price}</span></p>
+              </div>
             </div>
-             <div>
-             <p>$<span>345.00</span></p>
-             </div>
-            </div>
-         </div>
+          </div>
+        ))}
       </div>
-   </>    
+    </>
   );
 };
 

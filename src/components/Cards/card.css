@@ -10,6 +10,7 @@ height: 226px;
 align-items: center;
 flex-shrink: 0;
 padding: 10px;
+margin-bottom: 15px;
 }
 .accomodationCard .imageArea{
     position: relative;

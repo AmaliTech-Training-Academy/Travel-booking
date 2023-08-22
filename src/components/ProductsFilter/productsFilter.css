@@ -6,7 +6,6 @@
     overflow-y: scroll;
     scrollbar-width: none; /* For Firefox */
    -ms-overflow-style: none;
-   border: 1px solid saddlebrown;
 }
 
 .filterContainer .filters{
