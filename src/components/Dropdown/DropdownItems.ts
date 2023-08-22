@@ -29,7 +29,7 @@ export interface MenuItem {
       },
       {
         title: "Flights",
-        url: "/flights",
+        url: "/flight-booking",
         cName: "navLinks",
         active: "activeItem",
       },

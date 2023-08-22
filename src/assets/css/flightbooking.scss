@@ -1,0 +1,23 @@
+.flight-booking {
+    padding-left: 118px;
+    padding-right: 118px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    &__title {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 16px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .flight-booking {
+     
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
