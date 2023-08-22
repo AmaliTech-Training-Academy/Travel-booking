@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./card.css";
 import { Heart } from "react-feather";
-import { accomodationList } from "./products"; // Import your accomodationList
+import { accomodationList } from "./products";
 
 const AccomodationCards: React.FC = () => {
   const [isHeartFilled, setIsHeartFilled] = useState(false);
@@ -9,6 +9,13 @@ const AccomodationCards: React.FC = () => {
   const toggleHeartFill = () => {
     setIsHeartFilled(!isHeartFilled);
   };
+
+  // useEffect(() => {
+  //   // Fetch the data from an API endpoint or JSON file
+  //   fetch("/path/to/accomodations.json")
+  //     .then((response) => response.json())
+  //     .then((data) => setAccomodationData(data));
+  // }, [])
 
   return (
     <>
@@ -53,3 +60,4 @@ const AccomodationCards: React.FC = () => {
 };
 
 export default AccomodationCards;
+

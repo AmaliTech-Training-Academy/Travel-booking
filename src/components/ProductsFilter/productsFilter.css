@@ -3,9 +3,6 @@
     display: flex;
     gap: 0.6rem;
     height: 1130px;
-    overflow-y: scroll;
-    scrollbar-width: none; /* For Firefox */
-   -ms-overflow-style: none;
 }
 
 .filterContainer .filters{
@@ -44,18 +41,24 @@ line-height: normal;
     width: 70%;   
 }
 
-.filterContainer::-webkit-scrollbar {
+.products::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
 
   /* Optionally style the scrollbar track and thumb for WebKit */
-.filterContainer::-webkit-scrollbar-track {
+.products::-webkit-scrollbar-track {
     background: transparent; /* You can change this color */
   }
   
-  .filterContainer::-webkit-scrollbar-thumb {
+  .products::-webkit-scrollbar-thumb {
     background: transparent; /* You can change this color */
+  }
+
+  .products{
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+   -ms-overflow-style: none;
   }
 
   .checkInputs{
