@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSearchParams } from "react-router-dom";
 import Button from "../Buttons/Buttons";
 import plane from "../../assets/images/flights/plane_icon.png";
@@ -7,89 +7,32 @@ import FlightDropdown from "../../components/Dropdown/FlightDropdown";
 import DatePicker from "../DatePicker/DatePicker";
 import FlightPricing from "../Flight Pricing/FlightPricing";
 import "./flightfilter.scss";
-import { FlightFilterProducts } from "../FlightFilterProducts/FlightFilterProducts";
-import { FlightFilterProduct } from "../FlightFilterProducts/FlightFilterProducts";
 
-interface FlightFilterProps {
-  onFilter: (
-    tripType: string,
-    passenger: string,
-    flightType: string,
-    selectedStartDate: Date | null,
-    selectedEndDate: Date | null,
-    country: string | null,
-  ) => void;
+interface ParamTypes {
+  trip_type: string;
+  passenger: string;
+  flight_type: string;
+  departure_date: Date | null;
+  arrival_date: Date | null;
 }
 
-const FlightFilter: React.FC<FlightFilterProps> = ({ onFilter }) => {
-  const [tripType, setTripType] = useState<string>("Return");
-  const [passenger, setPassenger] = useState<string>("1 adult");
-  const [flightType, setFlightType] = useState<string>("Economy");
-  const [selectedStartDate, setSelectedStartDate] = useState<Date | null>(null);
-  const [selectedEndDate, setSelectedEndDate] = useState<Date | null>(null);
-  const [search, setSearch] = useState<string>("");
+interface FlightFilterProps {
+  onSearch: () => void;
+}
 
+const FlightFilter: React.FC<FlightFilterProps> = ({ onSearch }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const handleStartDateChange = (date: Date | null) => {
-    setSelectedStartDate(date);
-  };
-
-  const handleEndDateChange = (date: Date | null) => {
-    setSelectedEndDate(date);
-  };
-
-  // const handleSearch = () => {
-  //   onFilter(
-  //     tripType,
-  //     passenger,
-  //     flightType,
-  //     selectedStartDate,
-  //     selectedEndDate
-  //   );
-  //   onFilter(filterCriteria);
-
-  // };
-  const getFilteredCountries = (): FlightFilterProduct[] => {
-    return FlightFilterProducts.filter(
-      (country) =>
-        country
-        // .includes(country) &&
-        // country.toLowerCase().includes(search)
-    );
-  };
-
-  const handleSearch = () => {
-    const filterCriteria = {
-      tripType,
-      passenger,
-      flightType,
-      selectedStartDate,
-      selectedEndDate,
+  const setRouteQuery = (key: string, value: any) => {
+    const params: any = {
+      trip_type: searchParams.get("trip_type") || "Return",
+      passenger: searchParams.get("passenger") || "Adult",
+      flight_type: searchParams.get("flight_type") || "",
+      departure_date: searchParams.get("departure_date") || "",
+      arrival_date: searchParams.get("arrival_date") || "",
     };
-
-    // onFilter(
-    //   tripType,
-    //   passenger,
-    //   flightType,
-    //   selectedStartDate,
-    //   selectedEndDate
-    // );
-    // Filtering and looping through FlightFilterProducts
-    const filteredFlights = FlightFilterProducts.filter((flight) => {
-      const departureDateMatches =
-        !selectedStartDate || flight.departureDate === selectedStartDate;
-      const flightTypeMatches = flight.flightType === tripType;
-      // Add more criteria checks as needed
-
-      return departureDateMatches && flightTypeMatches;
-    });
-
-    filteredFlights.forEach((filteredFlight) => {
-      console.log(
-        `Flight ID ${filteredFlight.id} matches the selected criteria.`
-      );
-    });
+    params[key] = value;
+    setSearchParams(params);
   };
 
   return (
@@ -97,53 +40,42 @@ const FlightFilter: React.FC<FlightFilterProps> = ({ onFilter }) => {
       <div className="type-of-flight">
         <FlightDropdown
           options={["One way", "Return", "Multi-City"]}
-          value={tripType}
-          onSelect={(option: string) => setTripType(option)}
+          value={searchParams.get("trip_type") || "Return"}
+          onSelect={(option: string) => setRouteQuery("trip_type", option)}
         />
         <FlightDropdown
-          options={["Adult 18+", "Students over 18", "Multi-City"]}
-          value={passenger}
-          onSelect={(option: string) => setPassenger(option)}
+          options={["Adult 18+", "Students over 18", "Youths 12-17", "Children 2-11"]}
+          value={searchParams.get("passenger") || "Adult"}
+          onSelect={(option: string) => setRouteQuery("passenger", option)}
         />
         <FlightDropdown
-          options={[
-            "Economy",
-            "Premium Economy",
-            "Youth 12-17",
-            "Children 2-11",
-          ]}
-          value={flightType}
-          onSelect={(option: string) => setFlightType(option)}
+          options={["Economy", "Premium Economy", "Business", "First"]}
+          value={searchParams.get("flight_type") || "Economy"}
+          onSelect={(option: string) => setRouteQuery("flight_type", option)}
         />
       </div>
       <div className="departure-details">
         <div className="departure">
           <img src={plane} alt="" className="plane" />
-          <input
-            placeholder="From?"
-            className="departure"
-            onChange={(e) => setSearch(e.target.value)}
-          />
+          <input placeholder="From?" className="departure" />
           <img src={addIcon} alt="" />
         </div>
         <div className="departure">
           <img src={plane} alt="" className="plane" />
-          <input
-            placeholder="To?"
-            className="departure"
-            onChange={(e) => setSearch(e.target.value)}
-          />
+          <input placeholder="To?" className="departure" />
           <img src={addIcon} alt="" />
         </div>
         <DatePicker
-          selectedStartDate={selectedStartDate}
-          selectedEndDate={selectedEndDate}
-          onSelectStartDate={handleStartDateChange}
-          onSelectEndDate={handleEndDateChange}
+          selectedStartDate={searchParams.get("departure_date") || ""}
+          selectedEndDate={searchParams.get("arrival_date") || ""}
+          onSelectStartDate={(date) =>
+            setRouteQuery("departure_date", `${date}`)
+          }
+          onSelectEndDate={(date) => setRouteQuery("arrival_date", `${date}`)}
         />
 
         <div className="btn-lg">
-          <Button type="submit" block onClick={handleSearch}>
+          <Button type="submit" block onClick={onSearch}>
             Search
           </Button>
         </div>

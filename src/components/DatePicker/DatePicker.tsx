@@ -7,8 +7,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./datepicker.scss"; // Add your own styling here
 
 interface CustomDatePickerProps {
-  selectedStartDate: Date | null;
-  selectedEndDate: Date | null;
+  selectedStartDate: string;
+  selectedEndDate: string;
   onSelectStartDate: (date: Date | null) => void;
   onSelectEndDate: (date: Date | null) => void;
 }
@@ -26,7 +26,7 @@ const CustomDatePicker: React.FC<CustomDatePickerProps> = ({
       <div className="calender__start-date">
         <img src={calender} alt="calender" />
         <DatePicker
-          selected={selectedStartDate}
+          selected={selectedStartDate ? new Date(selectedStartDate) : null}
           onChange={(date) => onSelectStartDate(date)}
           dateFormat={customDateFormat}
           className="custom-datepicker"
@@ -37,7 +37,7 @@ const CustomDatePicker: React.FC<CustomDatePickerProps> = ({
       <div className="calender__start-date">
         <img src={calender} alt="calender" />
         <DatePicker
-          selected={selectedEndDate}
+          selected={selectedEndDate ? new Date(selectedEndDate) : null}
           onChange={(date) => onSelectEndDate(date)}
           dateFormat={customDateFormat}
           className="custom-datepicker"

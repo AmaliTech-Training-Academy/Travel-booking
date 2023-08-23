@@ -1,0 +1,61 @@
+.booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0 110px;
+  margin-bottom: 33px;
+
+  h3 {
+    color: var(--primary, #3d3939);
+    text-align: right;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+  
+  }
+  .booking-amount {
+    color: var(--primary, #3d3939);
+    background: #eee;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 263px;
+
+    width: 340px;
+    padding: 14px 14px;
+    &__various-prices {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      p {
+        margin-bottom: 0;
+      }
+      &.special {
+        color: var(--primary, #b75c76);
+      }
+    }
+    button {
+      width: 100%;
+      span {
+        margin-left: 100px;
+      }
+    }
+    &__special {
+      color: var(--primary, #b75c76);
+    }
+  }
+

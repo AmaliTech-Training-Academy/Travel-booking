@@ -4,21 +4,47 @@ import curve from "../../assets/images/flights/line_curve.png";
 import straightPlane from "../../assets/images/flights/plane_straight.png";
 import Button from "../Buttons/Buttons";
 import "./flightbookingcard.scss";
+import { FlightFilterProduct } from "../FlightFilterProducts/FlightFilterProducts";
+import { useNavigate } from "react-router-dom";
 
-const FlightBookingForm: React.FC = () => {
+interface FlightBookingCardProps {
+  flight: {
+    id: number;
+    flightType: string;
+    departureDate: Date | null;
+    arrivalDate: Date | null;
+    departureCity: string;
+    arrivalCity: string;
+    classType: string;
+    priceCategory: string;
+    passengerType: string;
+    flightName: string;
+    flightLogo: string;
+    departureTime: string;
+    arrivalTime: string;
+    flightPrice: number;
+  };
+}
 
- 
+const FlightBookingForm: React.FC<FlightBookingCardProps> = ({ flight }) => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleBookingNow = () => {
+    // Handle booking logic here
+    // For now, let's navigate to a booking page with the selected flight details
+    navigate(`/book-now/${flight.id}`);
+  };
   return (
     <div>
       <div className="card">
         <div className="card-flight">
           <div className="card__flight-name">
             <img src={flightlogo} alt="" />
-            <p>Royal Air Maroc</p>
+            <p>{flight.flightName}</p>
           </div>
           <div className="card__departure">
-            <p className="card__departure__time">22:10</p>
-            <p className="card__departure__hours">LHR</p>
+            <p className="card__departure__time">{flight.departureTime}</p>
+            <p className="card__departure__hours">{flight.departureCity}</p>
           </div>
         </div>
         <div className="card__flight-type">
@@ -33,12 +59,12 @@ const FlightBookingForm: React.FC = () => {
         </div>
         <div className="card-flight">
           <div className="card__departure">
-            <p className="card__departure__time">20:30</p>
-            <p className="card__departure__hours">LGW</p>
+            <p className="card__departure__time">{flight.arrivalTime}</p>
+            <p className="card__departure__hours">{flight.arrivalCity}</p>
           </div>
           <div className="card__final-price">
-            <p>$4,129</p>
-            <Button>Booking now </Button>
+            <p>${flight.flightPrice}</p>
+            <Button onClick={handleBookingNow}>Booking now </Button>
           </div>
         </div>
       </div>
