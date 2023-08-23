@@ -49,9 +49,14 @@ const FlightBooking: React.FC = () => {
     };
     const filteredFlight = FlightFilterProducts.filter(
       (item: FlightFilterProduct) =>
-        item.flightType.toLowerCase().includes(params.trip_type.toLowerCase()) &&
-        item.classType.toLowerCase().includes(params.flight_type.toLowerCase()) &&
-        item.passengerType.toLowerCase().includes(params.passenger.toLowerCase())
+        item.flightType
+          .toLowerCase()
+          .includes(params.trip_type.toLowerCase()) &&
+        item.classType.toLowerCase().includes(params.flight_type.toLowerCase())
+      //    &&
+      // item.passengerType
+      //   .toLowerCase()
+      //   .includes(params.passenger.toLowerCase())
     );
     setFlights(filteredFlight);
   };
