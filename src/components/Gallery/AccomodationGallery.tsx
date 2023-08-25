@@ -18,7 +18,7 @@ const AccomodationGallery: React.FC = () => {
           <img src={topimage1} alt="" />
           <img src={topimage2} alt="" />
         </div>
-        <div className='toprrightImages'>
+        <div className='toprightImages'>
           <img src={topimage3} alt="" />
         </div>
        </div>

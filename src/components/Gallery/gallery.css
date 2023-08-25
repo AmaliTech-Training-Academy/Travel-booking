@@ -34,3 +34,35 @@
     height: 12.4375rem;
     flex-shrink: 0;
 }
+
+
+@media screen and (max-width: 1250px){
+    .accomodationGallery .toprightImages img{
+        width: 93.5vw;
+        object-fit: cover;
+        height: 50vh;
+    }
+
+    .accomodationGallery .topImages .topleftImages{
+        flex-direction: row;
+    }
+
+    .accomodationGallery .topImages .topleftImages img{
+        width: 46vw;
+    }
+
+    .accomodationGallery .bottomImages{
+        gap: 0.3rem;
+        
+    }
+    .accomodationGallery .bottomImages img{
+        width: 22.5vw;
+    }
+    
+}
+
+@media screen and (max-width: 850px){
+    .accomodationGallery .bottomImages img{
+        width: 48%;
+    }
+}
