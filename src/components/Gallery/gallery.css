@@ -3,3 +3,34 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.accomodationGallery img{
+    width: 100%;
+}
+
+.accomodationGallery .topImages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.accomodationGallery .topImages .topleftImages{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.accomodationGallery .bottomImages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    max-width: 100%;
+}
+
+.accomodationGallery .bottomImages img{
+    width: 18rem;
+    height: 12.4375rem;
+    flex-shrink: 0;
+}
