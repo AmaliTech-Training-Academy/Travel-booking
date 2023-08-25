@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { ToastContainer} from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 import Home from "./routes/Home";
 import Login from "./pages/Login";
 import CustomerSignup from "./pages/CustomerSignup";
@@ -15,10 +15,11 @@ import ForgotPassword from "./pages/ForgotPassword";
 import SetNewPassword from "./pages/SetNewPassword";
 import Welcome from "./pages/CustomerWelcome";
 import CheckEmail from "./pages/CheckEmail";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import BookNow from "./pages/BookNow";
+import FlightPayment from "./pages/FlightPayment";
 import RemoveCart from "./pages/RemoveCart";
-
+import PaymentDetails from "./pages/PaymentDetails";
 
 function App(): JSX.Element {
   return (
@@ -38,10 +39,12 @@ function App(): JSX.Element {
         <Route path="/flight-booking" element={<FlightBooking />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/book-now" element={<BookNow />} />
+        <Route path="/flight-booking/:id/book" element={<BookNow />} />
+        <Route path="/flight-payment" element={<FlightPayment />} />
+        <Route path="/payment-details" element={<PaymentDetails />} />
         <Route path="/remove-cart" element={<RemoveCart />} />
       </Routes>
-        <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }

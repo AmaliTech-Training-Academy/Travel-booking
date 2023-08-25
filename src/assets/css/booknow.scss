@@ -1,6 +1,6 @@
 .booking {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   align-items: start;
   padding: 0 110px;
   margin-bottom: 33px;
@@ -15,47 +15,55 @@
     line-height: normal;
     text-align: left;
     margin-bottom: 16px;
-    margin-top: 24px;
+    margin-top: 0px;
   }
-  
-  }
-  .booking-amount {
+}
+.booking-amount {
+  color: var(--primary, #3d3939);
+  background: #eee;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 263px;
+
+  width: 340px;
+  padding: 14px 14px;
+  &__various-prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: var(--primary, #3d3939);
-    background: #eee;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    height: 263px;
-
-    width: 340px;
-    padding: 14px 14px;
-    &__various-prices {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--primary, #3d3939);
-      font-family: Inter;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      p {
-        margin-bottom: 0;
-      }
-      &.special {
-        color: var(--primary, #b75c76);
-      }
+    p {
+      margin-bottom: 0;
     }
-    button {
-      width: 100%;
-      span {
-        margin-left: 100px;
-      }
-    }
-    &__special {
+    &.special {
       color: var(--primary, #b75c76);
     }
   }
+  button {
+    width: 100%;
+    span {
+      margin-left: 100px;
+    }
+  }
+  &__special {
+    color: var(--primary, #b75c76);
+  }
+}
 
+@media screen and (max-width: 991px) {
+  .booking {
+    flex-direction: column-reverse;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+    margin-bottom: 0;
+  }
+}

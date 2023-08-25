@@ -1,6 +1,6 @@
 import React from "react";
 import flightlogo from "../../assets/images/flights/game-icons_royal-love.png";
-import curve from "../../assets/images/flights/line_curve.png";
+import curve from "../../assets/images/flights/line_curve1.svg";
 import straightPlane from "../../assets/images/flights/plane_straight.png";
 import Button from "../Buttons/Buttons";
 import "./flightbookingcard.scss";
@@ -32,7 +32,7 @@ const FlightBookingForm: React.FC<FlightBookingCardProps> = ({ flight }) => {
   const handleBookingNow = () => {
     // Handle booking logic here
     // For now, let's navigate to a booking page with the selected flight details
-    navigate(`/book-now/${flight.id}`);
+    navigate(`/flight-booking/${flight.id}/book`);
   };
   return (
     <div>
@@ -48,14 +48,16 @@ const FlightBookingForm: React.FC<FlightBookingCardProps> = ({ flight }) => {
           </div>
         </div>
         <div className="card__flight-type">
-          {/* <img src={curve} alt="" className="card__flight-type__curve"/> */}
-          <p className="card__flight-type__time">8h 30m</p>
-          <img
-            src={straightPlane}
-            alt=""
-            className="card__flight-type__plane"
-          />
-          <p className="card__flight-type__non-stop">nonstop</p>
+          <img src={curve} alt="" className="card__flight-type__curve" />
+          <div className="card__flight-type__set">
+            <p className="card__flight-type__set__time">8h 30m</p>
+            <img
+              src={straightPlane}
+              alt=""
+              className="card__flight-type__set__plane"
+            />
+            <p className="card__flight-type__set__non-stop">nonstop</p>
+          </div>
         </div>
         <div className="card-flight">
           <div className="card__departure">

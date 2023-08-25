@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import arrow from "../../assets/images/flights/arrow_down.png";
+import map from "../../assets/images/flights/map-desktop.png";
 import "./flightdropdown.scss";
 
 interface DropdownProps {
@@ -46,21 +47,28 @@ const FlightDropdown: React.FC<DropdownProps> = ({
   }, []);
 
   return (
-    <div className="type-of-flight__drop-down" ref={dropdownRef}>
-      <div className="type-of-flight__drop-down__drop-btn">
-        <button>{selected || "Return"}</button>
-        <img src={arrow} alt="" onClick={toggleDropdown} />
+    <>
+      <div className="drop-map">
+        <div className="type-of-flight__drop-down" ref={dropdownRef}>
+          <div className="type-of-flight__drop-down__drop-btn">
+            <button>{selected || "Return"}</button>
+            <img src={arrow} alt="" onClick={toggleDropdown} />
+          </div>
+          {show && (
+            <ul className="type-of-flight__drop-down__drop-content">
+              {options.map((option, index) => (
+                <li key={index} onClick={() => setSelectedOption(option)}>
+                  {option}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div>
+          {/* <img src={map} alt="" /> */}
+        </div>
       </div>
-      {show && (
-        <ul className="type-of-flight__drop-down__drop-content">
-          {options.map((option, index) => (
-            <li key={index} onClick={() => setSelectedOption(option)}>
-              {option}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    </>
   );
 };
 

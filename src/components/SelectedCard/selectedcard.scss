@@ -1,0 +1,198 @@
+.cards {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  .selected-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 906px;
+    background: #eee;
+    padding: 30px 16px;
+    margin-bottom: 24px;
+    &__name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &__time {
+      h4 {
+        color: #3d3939;
+        text-align: right;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+      }
+      p {
+        color: #3d3939;
+        text-align: right;
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0;
+      }
+    }
+    &__duration {
+      .stop {
+        text-align: center;
+        margin-top: -40px;
+        p {
+          color: #3d3939;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin: 0;
+        }
+      }
+    }
+    .baggage {
+      color: #3d3939;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: 215px;
+    }
+  }
+  .summary {
+    border-radius: 6px;
+    border: 1px solid #c5c5c5;
+    padding: 21px 44px 21px 9px;
+    width: 290px;
+    h6 {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+      margin-bottom: 18px;
+    }
+    &__prices {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 18px;
+      margin-top: 0;
+      p {
+        margin: 0;
+      }
+      &__discount {
+        color: var(--primary, #b75c76);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 18px;
+        margin-top: 0;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .taxes {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .original {
+        color: var(--primary, #b75c76);
+        font-family: Inter;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: strikethrough;
+        margin-left: 8px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .discounted {
+        color: var(--primary, #3d3939);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    .credit-card {
+      color: #a09f9f;
+      font-family: Inter;
+      font-size: 9px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .cart-summary {
+    border-radius: 6px;
+    background: #f0f0f0;
+    padding: 16px;
+    margin-top: 16px;
+    h3 {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .sub-total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    Button {
+      color: #fff;
+      text-align: right;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      width: 100%;
+      margin-top: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cards{
+    flex-direction: column;
+  }
+}

@@ -53,10 +53,10 @@ const FlightBooking: React.FC = () => {
           .toLowerCase()
           .includes(params.trip_type.toLowerCase()) &&
         item.classType.toLowerCase().includes(params.flight_type.toLowerCase())
-      //    &&
-      // item.passengerType
-      //   .toLowerCase()
-      //   .includes(params.passenger.toLowerCase())
+         &&
+      params.passenger
+        .toLowerCase()
+        .includes(item.passengerType.toLowerCase())
     );
     setFlights(filteredFlight);
   };
