@@ -4,6 +4,12 @@
     margin-right: auto;
 }
 
+.mapLink{
+    color: rgb(210, 98, 98);
+    width: 100px;
+    font-size: small;
+}
+
 .accomodationInfo .accomodationInfoText button{
     display: flex;
 width: 13.5625rem;
@@ -14,6 +20,11 @@ align-items: center;
 gap: 0.625rem;
 margin-left: auto;
 margin-top: auto;
+}
+
+.accomodationInfo .accomodationInfoText button a{
+    text-decoration: none;
+    color: white;
 }
 
 .accomodationInfo .accomodationInfoText{

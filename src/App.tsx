@@ -17,6 +17,8 @@ import Welcome from "./pages/CustomerWelcome";
 import CheckEmail from "./pages/CheckEmail";
 import 'react-toastify/dist/ReactToastify.css';
 import ProductPage from "./routes/ProductPage";
+import AccomodationCart from "./routes/AccomodationCart";
+import AccomodationCartpage from "./routes/AccomodationCartpage";
 
 
 function App(): JSX.Element {
@@ -38,6 +40,8 @@ function App(): JSX.Element {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/singleproduct" element={<ProductPage />} />
+        <Route path="/addaccomodation" element={<AccomodationCart />} />
+        <Route path="/accomodationcart" element={<AccomodationCartpage />} />
       </Routes>
         <ToastContainer/>
     </div>

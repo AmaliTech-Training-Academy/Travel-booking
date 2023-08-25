@@ -14,11 +14,13 @@ const AccomodationProduct: React.FC = () => {
      <div className='accomodationInfoText'>
      
      <TextHeading h1Text='Boutique At Grand Central' pText='New York- America' />
-     <Link to="">Show map</Link>
+     <Link className='mapLink' to="">Show map</Link>
     
      <div className='coverbutton'>
         <button>
-        Reserve your apartment
+        <Link className="availableButton" to={"/addaccomodation"}>
+      Reserve your apartment
+       </Link>
         </button>
       </div>
      </div>     
@@ -75,3 +77,4 @@ export default AccomodationProduct;
 
   
 export {}; 
+
