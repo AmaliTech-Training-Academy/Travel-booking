@@ -3,3 +3,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.itemDescription{
+    color: var(--primary, #3D3939);
+font-family: Inter;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 76rem;
+}
