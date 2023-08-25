@@ -7,6 +7,7 @@ import check from "../assets/images/flights/check-mark.png";
 import "../assets/css/flightpayment.scss";
 import SelectedCard from "../components/SelectedCard/SelectedCard";
 import CompletionProgress from "../components/CompletionProgress/CompletionProgress";
+import { Link } from "react-router-dom";
 
 const FlightPayment = () => {
   return (
@@ -82,7 +83,9 @@ const FlightPayment = () => {
           </div>
         </div>
         <p className="cancellation">Free cancellation at any time</p>
-        <Button>continue</Button>
+        <Link to="/payment-details">
+          <Button>continue</Button>
+        </Link>
         <div className="price-assurance">
           <div className="ewallet">
             <img src={ewallet} alt="" />

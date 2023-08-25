@@ -2,12 +2,12 @@
   margin-left: 118px;
   margin-right: 110px;
   margin-top: 16px;
-  
+
   .passenger-info {
     padding: 32px 30px;
     width: 906px;
     border-radius: 6px;
-    margin-top: -292px;
+    margin-top: -270px;
     background: #f0f0f0;
     &__title {
       color: var(--primary, #3d3939);
@@ -189,10 +189,13 @@
     font-weight: 400;
     line-height: normal;
   }
-  button {
-    width: 240px;
-    margin-top: 16px;
-    margin-bottom: 24px;
+  a {
+    text-decoration: none;
+    button {
+      width: 240px;
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
   }
   .price-assurance {
     margin-bottom: 32px;

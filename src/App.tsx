@@ -20,6 +20,7 @@ import BookNow from "./pages/BookNow";
 import FlightPayment from "./pages/FlightPayment";
 import RemoveCart from "./pages/RemoveCart";
 import PaymentDetails from "./pages/PaymentDetails";
+import SuccessfulPayment from "./pages/SuccessfulPayment";
 
 function App(): JSX.Element {
   return (
@@ -42,6 +43,7 @@ function App(): JSX.Element {
         <Route path="/flight-booking/:id/book" element={<BookNow />} />
         <Route path="/flight-payment" element={<FlightPayment />} />
         <Route path="/payment-details" element={<PaymentDetails />} />
+        <Route path="/successful-payment" element={<SuccessfulPayment />} />
         <Route path="/remove-cart" element={<RemoveCart />} />
       </Routes>
       <ToastContainer />

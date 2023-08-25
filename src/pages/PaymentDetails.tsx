@@ -9,6 +9,7 @@ import CompletionProgress from "../components/CompletionProgress/CompletionProgr
 import Footer from "../components/Footer/Footer";
 import "../assets/css/paymentdetails.scss";
 import Button from "../components/Buttons/Buttons";
+import { Link } from "react-router-dom";
 
 const PaymentDetails = () => {
   return (
@@ -62,7 +63,9 @@ const PaymentDetails = () => {
                 <img src={lock} alt="" />
                 <p>Your transaction is secured with SSL encryption.</p>
               </div>
-              <Button>Save</Button>
+              <Link to="/successful-payment">
+                <Button>Save</Button>
+              </Link>
             </div>
           </div>
         </div>
