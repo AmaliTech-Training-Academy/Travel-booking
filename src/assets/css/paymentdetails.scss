@@ -1,0 +1,86 @@
+.payment-details {
+  margin-left: 118px;
+  margin-right: 110px;
+  //   margin-top: 16px;
+  &__content {
+    margin-top: -260px;
+    h5 {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin: 0;
+    }
+    &__forms {
+      border-radius: 6px;
+      background: #f0f0f0;
+      padding: 20px 16px 32px 16px;
+      margin-top: 16px;
+      margin-bottom: 32px;
+      width: 906px;
+      &__card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .card-details {
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          flex-direction: column;
+          margin-bottom: 24px;
+          .card-type {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            .card-logos {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+            }
+          }
+          label {
+            color: var(--primary, #3d3939);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 7px;
+          }
+          input {
+            border-radius: 6px;
+            border: 1px solid #888686;
+            background: #fff;
+            padding: 10px 16px;
+            align-items: center;
+            gap: 10px;
+            display: inline-flex;
+            width: 416px;
+            color: var(--primary, #3d3939);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+      .encryption {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

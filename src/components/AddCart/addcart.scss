@@ -1,0 +1,113 @@
+.booking-ticket-main {
+  .cart-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 867px;
+    height: 263px;
+    padding: 10px 16px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    background: #eee;
+    flex-shrink: 0;
+    padding: 16px 16px;
+    gap: 36px;
+    .booking-ticket {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 52px;
+      margin-top: 10px;
+      .booking-ticket__flight-name {
+        display: flex;
+        justify-content: space-between;
+
+        align-items: center;
+        gap: 24px;
+
+        .flight-name {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          color: #3d3939;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      .flight__time {
+        text-align: center;
+
+        &__time {
+          color: #3d3939;
+          font-family: Inter;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: -40px;
+          p {
+            margin-bottom: 0;
+            margin-top: 0;
+          }
+          h3 {
+            margin: 0;
+          }
+        }
+      }
+      .time {
+        text-align: center;
+        p {
+          color: #3d3939;
+          text-align: right;
+          font-family: Inter;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+        h3 {
+          margin: 0;
+        }
+      }
+      .baggage {
+        width: 174px;
+        color: #3d3939;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    button {
+      width: 70%;
+      text-align: center;
+      margin-bottom: 0;
+      // margin-left: 18%;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .booking-ticket-main {
+    .cart-content {
+      max-width: 100%;
+    }
+    .booking-ticket {
+      .booking-ticket__flight-name {
+        flex-direction: column;
+        row-gap: 0;
+      }
+      .baggage{
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.completion-progress {
+  .profile-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // margin-top: 21px;
+    // margin-bottom: 26px;
+
+    .profile-steps {
+      display: flex;
+      align-items: center;
+      p {
+        color: #fff;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        padding: 3px;
+        background: var(--primary, #b75c76);
+        margin-right: 16px;
+      }
+      h6 {
+        color: var(--primary, #3d3939);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      .line {
+        max-width: 260px;
+        display: block;
+        height: 3px;
+        flex-shrink: 0;
+        background: var(--primary, #b75c76);
+        margin-left: 20px;
+      }
+      .line-last {
+        max-width: 260px;
+        height: 3px;
+        flex-shrink: 0;
+        background: var(--primary, #b75c76);
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .completion-progress {
+    width: 343px;
+    .profile-progress {
+      .profile-steps {
+       
+        h6 {
+          display: none;
+        }
+        .line {
+          min-width: 100px;
+        }
+        .line-last {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.pagination {
+    margin-bottom: 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    .arrow{
+        width: 36.011px;
+height: 36.011px;
+flex-shrink: 0;
+color: #B75C76;
+border: none;
+    }
+  button {
+    border-radius: 44px;
+    border: 2px solid var(--primary, #b75c76);
+    margin-right: 30px;
+    cursor: pointer;
+    padding: 6px 10px;
+    background-color: transparent;
+  }
+}

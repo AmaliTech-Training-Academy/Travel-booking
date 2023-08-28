@@ -1,0 +1,272 @@
+.flight-payment {
+  margin-left: 118px;
+  margin-right: 110px;
+  margin-top: 16px;
+
+  .passenger-info {
+    padding: 32px 30px;
+    width: 906px;
+    border-radius: 6px;
+    margin-top: -270px;
+    background: #f0f0f0;
+    &__title {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-top: 0;
+    }
+    &__content {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin: 16px 0;
+    }
+    &__sub-title {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+    }
+    &__bio {
+      .gender {
+        display: flex;
+        align-items: center;
+
+        h6 {
+          color: var(--primary, #3d3939);
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          margin-right: 8px;
+        }
+        input {
+          margin-right: 8px;
+          color: #b75c76;
+        }
+        label {
+          margin-right: 8px;
+        }
+      }
+      .name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        .firstname {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          label {
+            color: var(--primary, #3d3939);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+          input {
+            border-radius: 6px;
+            border: 1px solid #888686;
+            background: #fff;
+            padding: 10px 16px;
+            align-items: center;
+            gap: 10px;
+            display: inline-flex;
+            width: 416px;
+            color: var(--primary, #3d3939);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+  .passenger-info-b {
+    padding: 32px 30px;
+    width: 906px;
+    border-radius: 6px;
+    background: #f0f0f0;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    &__title {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    &__content {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin: 16px 0;
+    }
+    &__sub-title {
+      color: var(--primary, #3d3939);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+    }
+    &__bio {
+      .gender {
+        display: flex;
+        align-items: center;
+
+        h6 {
+          color: var(--primary, #3d3939);
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+      .name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        .firstname {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          label {
+            color: var(--primary, #3d3939);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+          input {
+            border-radius: 6px;
+            border: 1px solid #888686;
+            background: #fff;
+            padding: 10px 16px;
+            align-items: center;
+            gap: 10px;
+            display: inline-flex;
+            width: 416px;
+            color: var(--primary, #3d3939);
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
+  .cancellation {
+    color: var(--primary, #3d3939);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  a {
+    text-decoration: none;
+    button {
+      width: 240px;
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+  }
+  .price-assurance {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 22px;
+    .ewallet {
+      background: #f8dde4;
+      padding: 40px 106px;
+      width: 418px;
+    }
+    .content {
+      .points {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+        // img {
+        // }
+        p {
+          color: var(--primary, #3d3939);
+          font-family: Inter;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          width: 318px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .flight-payment {
+    margin-left: 16px;
+    margin-right: 16px;
+    .passenger-info {
+      margin-top: 0;
+      background-color: transparent;
+      padding: 10px;
+      width: 100%;
+      .name {
+        flex-direction: column;
+      }
+      h4 {
+        margin-bottom: 6px;
+      }
+      p {
+        width: 100%;
+      }
+    }
+    .passenger-info-b {
+      width: 100%;
+      padding: 16px;
+
+      .gender {
+        h6 {
+          margin-top: 6px;
+          margin-bottom: 6px;
+          margin-right: 0;
+          margin-top: 6px;
+        }
+      }
+      .name {
+        flex-direction: column;
+      }
+    }
+    .price-assurance {
+      flex-direction: column;
+    }
+  }
+}
