@@ -1,0 +1,68 @@
+.accomodationGallery{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.accomodationGallery img{
+    width: 100%;
+}
+
+.accomodationGallery .topImages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.accomodationGallery .topImages .topleftImages{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.accomodationGallery .bottomImages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    max-width: 100%;
+}
+
+.accomodationGallery .bottomImages img{
+    width: 18rem;
+    height: 12.4375rem;
+    flex-shrink: 0;
+}
+
+
+@media screen and (max-width: 1250px){
+    .accomodationGallery .toprightImages img{
+        width: 93.5vw;
+        object-fit: cover;
+        height: 50vh;
+    }
+
+    .accomodationGallery .topImages .topleftImages{
+        flex-direction: row;
+    }
+
+    .accomodationGallery .topImages .topleftImages img{
+        width: 46vw;
+    }
+
+    .accomodationGallery .bottomImages{
+        gap: 0.3rem;
+        
+    }
+    .accomodationGallery .bottomImages img{
+        width: 22.5vw;
+    }
+    
+}
+
+@media screen and (max-width: 850px){
+    .accomodationGallery .bottomImages img{
+        width: 48%;
+    }
+}

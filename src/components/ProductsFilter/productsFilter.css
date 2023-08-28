@@ -2,8 +2,7 @@
     width: 100%;
     display: flex;
     gap: 0.9rem;
-    height: 1130px;
-    
+    height: 1130px;    
 }
 
 .pagination{
@@ -201,6 +200,22 @@ flex-shrink: 0;
     width: 100%;   
     height: auto;
 }
+
+.filterContainer{
+  height: auto;
+  margin: 0;
+}
+.pagination{
+  display: flex;
+width: 100%;
+justify-content: center;
+align-items: center;
+gap: 1.9375rem;
+padding: 0;
+background: none;
+border: none;
+outline: none;
+}
   }
 
   @media screen and (max-width: 850px) {
@@ -212,5 +227,17 @@ flex-shrink: 0;
   @media screen and (max-width: 1250px) {
     .checkInputs{
       width: 11.2rem;
+    }
+
+    .filterContainer{
+      margin: 0;
+      height: auto;
+    }
+
+    .pagination{
+      width: auto;
+      padding: 0;
+      background: none;
+      border: none;
     }
   }
