@@ -11,6 +11,11 @@
     background: #eee;
     padding: 30px 16px;
     margin-bottom: 24px;
+    .name-distination {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     &__name {
       display: flex;
       align-items: center;
@@ -192,7 +197,66 @@
 }
 
 @media screen and (max-width: 991px) {
-  .cards{
+  .cards {
     flex-direction: column;
+    .selected-card {
+      padding: 17px 14px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 16px;
+      row-gap: 30px;
+      .name-distination {
+        flex-direction: column;
+        gap: 10px;
+      }
+      &__name {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 12px;
+        gap: 7px;
+
+        p {
+          margin: 0;
+        }
+      }
+      &__time {
+        h4 {
+          font-size: 12px;
+          font-weight: 600;
+        }
+        p {
+          font-size: 12px;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+      .baggage {
+        color: #3d3939;
+        text-align: right;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 70px;
+        margin: 0;
+      }
+    }
+    .summary {
+      width: 100%;
+      padding: 0;
+      border: none;
+      max-width:600px;
+    }
+    .cart-summary {
+      margin-top: 0;
+      background-color: transparent;
+      Button {
+        width: 100%;
+      }
+    }
   }
 }

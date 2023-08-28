@@ -18,7 +18,7 @@ const CompletionProgress = () => {
           <div className="profile-steps">
             <p>3</p>
             <h6>Pay</h6>
-            <div className="line"></div>
+            <div className="line-last"></div>
           </div>
         </div>
     </div>

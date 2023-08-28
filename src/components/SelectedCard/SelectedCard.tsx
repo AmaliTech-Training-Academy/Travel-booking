@@ -1,23 +1,25 @@
-import React from "react";
 import flightlogo from "../../assets/images/flights/game-icons_royal-love.png";
 import plane from "../../assets/images/flights/plane_straight.png";
 import curve from "../../assets/images/flights/line_curve1.svg";
 import "./selectedcard.scss";
 import Button from "../Buttons/Buttons";
+import React from "react";
 
 const SelectedCard = () => {
   return (
     <div className="cards">
       <div className="selected-card">
-        <div className="selected-card__name">
-          <img src={flightlogo} alt="" />
-          <p>Royal Air Maroc</p>
-        </div>
-        <div className="selected-card__time">
-          <h4>21:00</h4>
-          <p>
-            <span>ACC </span>Accra
-          </p>
+        <div className="name-distination">
+          <div className="selected-card__name">
+            <img src={flightlogo} alt="" />
+            <p>Royal Air Maroc</p>
+          </div>
+          <div className="selected-card__time">
+            <h4>21:00</h4>
+            <p>
+              <span>ACC </span>Accra
+            </p>
+          </div>
         </div>
         <div className="selected-card__duration">
           <img src={curve} alt="" />
@@ -27,13 +29,15 @@ const SelectedCard = () => {
             <p>1 Stop</p>
           </div>
         </div>
-        <div className="selected-card__time">
-          <h4>21:00</h4>
-          <p>
-            <span>ACC </span>Accra
-          </p>
+        <div className="name-distination">
+          <div className="selected-card__time">
+            <h4>21:00</h4>
+            <p>
+              <span>ACC </span>Accra
+            </p>
+          </div>
+          <p className="baggage">Baggage included 2 34kg</p>
         </div>
-        <p className="baggage">Baggage included 2 34kg</p>
       </div>
       <div>
         <div className="summary">

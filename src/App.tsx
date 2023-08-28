@@ -21,6 +21,8 @@ import FlightPayment from "./pages/FlightPayment";
 import RemoveCart from "./pages/RemoveCart";
 import PaymentDetails from "./pages/PaymentDetails";
 import SuccessfulPayment from "./pages/SuccessfulPayment";
+import ProductPage from "./routes/ProductPage";
+
 
 function App(): JSX.Element {
   return (
@@ -45,6 +47,7 @@ function App(): JSX.Element {
         <Route path="/payment-details" element={<PaymentDetails />} />
         <Route path="/successful-payment" element={<SuccessfulPayment />} />
         <Route path="/remove-cart" element={<RemoveCart />} />
+        <Route path="/singleproduct" element={<ProductPage />} />
       </Routes>
       <ToastContainer />
     </div>

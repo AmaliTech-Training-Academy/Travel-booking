@@ -5,7 +5,6 @@ import HomeNav from "../components/Navbar/HomeNav";
 import Footer from "../components/Footer/Footer";
 import Flight from "../components/Flight/FlightHero";
 import FlightFilter from "../components/FlightFilter/FlightFliter";
-import FlightPricing from "../components/Flight Pricing/FlightPricing";
 import { getRequest } from "../api/request";
 import { toast } from "react-toastify";
 import FlightBookingCard from "../components/FlightBookingCard/FlightBookingCard";
@@ -47,26 +46,48 @@ const FlightBooking: React.FC = () => {
       departure_date: searchParams.get("departure_date") || "",
       arrival_date: searchParams.get("arrival_date") || "",
     };
+
     const filteredFlight = FlightFilterProducts.filter(
       (item: FlightFilterProduct) =>
         item.flightType
           .toLowerCase()
           .includes(params.trip_type.toLowerCase()) &&
-        item.classType.toLowerCase().includes(params.flight_type.toLowerCase())
-         &&
-      params.passenger
-        .toLowerCase()
-        .includes(item.passengerType.toLowerCase())
+        item.classType
+          .toLowerCase()
+          .includes(params.flight_type.toLowerCase()) &&
+        params.passenger
+          .toLowerCase()
+          .includes(item.passengerType.toLowerCase())
     );
     setFlights(filteredFlight);
   };
 
+  const handleSort = () => {
+    const sort = searchParams.get("sort");
+    const tempFlights = [...flights];
+    if (sort === "price") {
+      const sortedFlights = tempFlights.sort(
+        (a, b) => a.flightPrice - b.flightPrice
+      );
+      setFlights(sortedFlights);
+    }
+    if (sort === "time") {
+      const flightsWithDuration = tempFlights.map((flight) => ({
+        ...flight,
+        duration:
+          new Date(`${flight.arrivalDate} ${flight.arrivalTime}`)
+      }));
+      console.log(flightsWithDuration)
+    }
+  };
+
   useEffect(() => {
-    handleFilter();
-    getRequest("/api/flights").then((response: { message: string }) => {
-      return toast(response.message, { type: "success" });
-    });
-  }, []);
+    // handleFilter();
+    handleSort();
+    // getRequest("/api/flights").then((response: { message: string }) => {
+    //   return toast(response.message, { type: "success" });
+    // });
+  }, [searchParams]);
 
   return (
     <div>

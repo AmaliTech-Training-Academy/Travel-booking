@@ -5,7 +5,6 @@ import plane from "../../assets/images/flights/plane_icon.png";
 import addIcon from "../../assets/images/flights/add.png";
 import FlightDropdown from "../../components/Dropdown/FlightDropdown";
 import DatePicker from "../DatePicker/DatePicker";
-import FlightPricing from "../Flight Pricing/FlightPricing";
 import "./flightfilter.scss";
 
 interface ParamTypes {
@@ -44,7 +43,12 @@ const FlightFilter: React.FC<FlightFilterProps> = ({ onSearch }) => {
           onSelect={(option: string) => setRouteQuery("trip_type", option)}
         />
         <FlightDropdown
-          options={["Adult 18+", "Students over 18", "Youths 12-17", "Children 2-11"]}
+          options={[
+            "Adult 18+",
+            "Students over 18",
+            "Youths 12-17",
+            "Children 2-11",
+          ]}
           value={searchParams.get("passenger") || "Adult"}
           onSelect={(option: string) => setRouteQuery("passenger", option)}
         />
@@ -80,7 +84,32 @@ const FlightFilter: React.FC<FlightFilterProps> = ({ onSearch }) => {
           </Button>
         </div>
       </div>
-      <FlightPricing />
+      <div className="flight-pricing">
+        <div
+          className="flight-pricing__range"
+          onClick={() => setRouteQuery("sort", "price")}
+        >
+          <h4>Cheapest</h4>
+          <p>$1,456</p>
+        </div>
+        <div className="line"></div>
+        <div
+          className="flight-pricing__range"
+          onClick={() => setRouteQuery("sort", "best")}
+        >
+          <h4>Best</h4>
+          <p>$1,675</p>
+        </div>
+        <div className="line"></div>
+
+        <div
+          className="flight-pricing__range"
+          onClick={() => setRouteQuery("sort", "time")}
+        >
+          <h4>Quickest</h4>
+          <p>$1,456</p>
+        </div>
+      </div>
     </div>
   );
 };
